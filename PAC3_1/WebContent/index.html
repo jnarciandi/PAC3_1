@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="ISO-8859-1">  
+<title>Insert title here</title>  
+</head> 
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style> 
+<body>  
+  
+Add New Medicament
+<form action="SaveServlet" method="post">  
+<table id="customers">  
+<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
+<tr><td>Price:</td><td><input type="text" name="price"/></td></tr> 
+<tr><td>Description:</td><td><input type="text" name="description"/></td></tr> 
+<tr><td>Producer:</td><td><input type="text" name="producer"/></td></tr> 
+<tr><td>Category:</td><td><input type="text" name="category"/></td></tr> 
+<tr><td>Stock:</td><td><input type="text" name="stockQuantity"/></td></tr> 
+<tr><td>Stock Order:</td><td><input type="text" name="stockInOrder"/></td></tr> 
+<tr><td>Active:</td><td><input type="checkbox" name="active" value="true"/></td></tr> 
+
+ 
+<tr><td colspan="2"><input type="submit" value="Save Medicament"/></td></tr>  
+</table>  
+</form>  
+  
+<br/>  
+<a href="ViewServlet">view medicament</a>  
+  
+</body>  
+</html>
